@@ -1,0 +1,66 @@
+body {
+  background-color: #FFF !important;
+}
+.downloadIcon {
+    color: #53C020;
+}
+.downloadIcon:hover {
+  cursor: pointer;
+}
+
+.ant-table-thead > tr > th{
+    font-weight: 600;
+    font-size: 16px;
+    background: #93C020 !important;
+    color: #FFFFFF !important;
+    text-align: center  !important;
+}
+.ant-table-thead {
+    background-color: #FFF;
+}
+.ant-table-tbody > tr {
+    text-align: center !important;
+}
+td.ant-table-column-sort {
+    background-color: transparent !important;
+}
+
+.table-row-light {
+    background-color: #ffffff;
+}
+.table-row-dark {
+    background-color: #fbfbfb;
+}
+.ant-modal-wrap-rtl .ant-modal-close {
+    display: none !important;
+}
+.ant-select-selector {
+    height: 40px !important;
+}
+.ant-modal {
+    width: 938px !important
+}
+.ant-table-tbody > tr.ant-table-row-level-1:hover > td {
+    background: red;
+  }
+  #resignation .ant-tabs-top > .ant-tabs-nav::before, .ant-tabs-bottom > .ant-tabs-nav::before, .ant-tabs-top > div > .ant-tabs-nav::before, .ant-tabs-bottom > div > .ant-tabs-nav::before {
+    border-bottom:0px solid #f0f0f0 !important
+  }
+  #resignation .ant-tabs-nav {
+    margin-bottom: -23px !important
+  }
+  #resignation .ant-tabs-tab-active {
+    background:#FEA900 !important;
+    
+  }
+  #resignation .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #FFF !important;
+  }
+  #resignation .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn:hover {
+    color: #FFF !important;
+  }
+
+  #resignation .ant-tabs-tab:hover {
+    background:#FEA900 !important;
+    color: #FFF !important;
+  }

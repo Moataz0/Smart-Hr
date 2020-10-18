@@ -1,0 +1,82 @@
+import React from "react";
+import "./App.css";
+import { Route, Router } from "react-router-dom";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import "antd/dist/antd.css";
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+import history from "./utilities/History";
+import Mymodal from "./components/portal";
+import {
+  Login,
+  Navbar,
+  Attendance,
+  BreadCrumbs,
+  Employees,
+  Home,
+  MyAlert,
+  PrivateRouter,
+  Profile,
+  Requests,
+  Resignation,
+  SelectedUser,
+  ShowComponent,
+  SideBar,
+  Vacation,
+  reducers,
+  ResetPassword,
+  Notifications,
+} from "./components";
+const THEME = createMuiTheme({
+  typography: {
+    fontFamily: '"Cairo"',
+    fontSize: 15,
+    lineHeight: 1.5,
+    letterSpacing: 0.32,
+    useNextVariants: true,
+    suppressDeprecationWarnings: true,
+    h6: {
+      fontWeight: 600,
+    },
+  },
+});
+
+function App() {
+  return (
+    <MuiThemeProvider theme={THEME}>
+      <Provider store={createStore(reducers, applyMiddleware(thunk))}>
+        <MyAlert />
+        <Mymodal />
+        <div className="App">
+          <ShowComponent Component={<Navbar />} />
+          <ShowComponent Component={<SideBar />} />
+          <ShowComponent Component={<BreadCrumbs />} />
+          <Router history={history}>
+            <Route path="/" exact component={Login} />
+            <PrivateRouter
+              path="/resetPassword"
+              exact
+              component={ResetPassword}
+            />
+            <PrivateRouter path="/home" exact component={Home} />
+            <PrivateRouter path="/afterLogin" exact component={SelectedUser} />
+            <PrivateRouter path="/employees" exact component={Employees} />
+            <PrivateRouter path="/attendance" exact component={Attendance} />
+            <PrivateRouter path="/requests" exact component={Requests} />
+            <PrivateRouter path="/vacation" exact component={Vacation} />
+            <PrivateRouter path="/resignation" exact component={Resignation} />
+            <PrivateRouter path="/Profile" exact component={Profile} />
+            <PrivateRouter
+              path="/notifications"
+              exact
+              component={Notifications}
+            />
+          </Router>
+        </div>
+      </Provider>
+    </MuiThemeProvider>
+  );
+}
+
+export default App;

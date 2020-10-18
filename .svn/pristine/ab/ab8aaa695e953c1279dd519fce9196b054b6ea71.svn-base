@@ -1,0 +1,21 @@
+.notificationMenu {
+    direction: rtl;
+    font-size: 15px;
+    margin-top: 3rem;
+}
+
+.notificationMenu:after, .notificationMenu:before {
+	bottom: 97%;
+	right: 83%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.notificationMenu:after {
+	border-bottom-color: #FFF;
+	border-width: 17px;
+}

@@ -1,0 +1,13 @@
+
+.ant-list-vertical .ant-list-item-meta-title {
+    font-size: 15px !important;
+}
+.ant-list-vertical .ant-list-item-meta {
+    margin-bottom: 0;
+}
+.ant-list-rtl.ant-list-vertical .ant-list-item-extra {
+    margin-left: 15rem;
+}
+.historyList {
+    margin-bottom: 5rem;
+}
